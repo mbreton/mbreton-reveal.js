@@ -10,6 +10,20 @@
 
 
 /*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+.editor {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+    letter-spacing: normal;
+    text-align: left;
+    zoom: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+
+
+/*********************************************
  * RESET STYLES
  *********************************************/
 

@@ -11,6 +11,7 @@ Reveal.initialize({
 
     // Optional libraries used to extend on reveal.js
     dependencies: [
+        { src: 'plugin/sample-loader/loader.js', async: false},
         { src: 'lib/js/classList.js', condition: function () {
             return !document.body.classList;
         } },
