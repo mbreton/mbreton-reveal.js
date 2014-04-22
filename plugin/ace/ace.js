@@ -9,7 +9,7 @@ if (typeof window.addEventListener === 'function') {
         var editor = ace.edit(editorElement);
         var language = editorElement.className.match(languagePattern)[1];
         editor.setFontSize(15);
-        editor.setTheme("ace/theme/solarized_light");
+        editor.setTheme("ace/theme/chrome");
         editor.getSession().setMode("ace/mode/" + language);
     });
 }

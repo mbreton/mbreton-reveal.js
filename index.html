@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/theme/sky.css">
+    <link rel="stylesheet" href="css/simplegrid.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
 </head>
 <body>
@@ -18,12 +19,151 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <pre><code id="file.js" class="language-javascript" data-trim data-load ></code></pre>
+            <h1>Dart</h1>
         </section>
         <section>
-            <div id="file2.js" class="language-java editor stretch" data-load></div>
-        </section>
+            <h3>About://me</h3>
 
+            <div class="grid grid-pad">
+                <div class="col-5-12" style="padding-top: 0.1em">
+                    <div class="side avatar">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="col-7-12">
+                    <div class="def">
+                        <p class="title">Mathieu Breton : /[mathieu] bʀətɔ̃/ (n.m.)</p>
+                        <ul>
+                            <li>Consultant Xebia, membre actif de la communauté web à Paris</li>
+                            <li>Chevalier de l’ordre du mérite des Single Page Applications</li>
+                            <li>Artisan web, instructeur Neo4J, docteur ès Grails et contributeur Ember.JS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Plan de vol</h2>
+            <ol>
+                <li>Mais pourquoi ont-ils eu cette idée folle ?</li>
+                <li>Sous le capot</li>
+                <li>Les performances</li>
+                <li>L'industrialisation</li>
+                <li>Polymer</li>
+                <li>AngularDart</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Mais pourquoi ont-ils eu cette idée folle ?</h2>
+        </section>
+        <section>
+            <h2>Sous le capot</h2>
+        </section>
+        <section>
+            <h3>Késako ?</h3>
+
+            <div>Propulsé par Google en <span class="color">2011</span></div>
+
+            <div class="fragment">Récemment sorti en <span class="color">version 1.3</span></div>
+
+            <div class="fragment">Sous licence <span class="color">BSD</span></div>
+
+            <div class="fragment">standardisation ECMA par le comité <span class="color">TC52</span></div>
+        </section>
+        <section>
+            <h3>Conçu pour :</h3>
+            <ul>
+                <li class="fragment">bâtir de larges applications web</li>
+                <li class="fragment">créer des jeux vidéos</li>
+                <li class="fragment">être plus rapide que JavaScript</li>
+            </ul>
+            <aside class="notes" data-markdown>
+                * Parler du SIMD dans Dart
+                * Cela permet de faire des multiplication de Float32x4 and Int32x4
+                * Potential speedup of 400%
+                * Nombreuses libs pour fabriquer des Jeux
+            </aside>
+        </section>
+        <section>
+            <h2>Les performances</h2>
+        </section>
+        <section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - DeltaBlue</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#DeltaBlue"></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - FluidMotion</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#FluidMotion"></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - Richards</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Richards"></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - Tracer</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Tracer"></iframe>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - RequestPerSecond</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#RequestsPerSecond"></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - Avg Latency</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Avg latency"></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="stretch">
+                    <h5>Performance - Max Latency</h5>
+                    <br/>
+                    <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Max latency"></iframe>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h3>Le snapshot</h3>
+        </section>
+        <section>
+            <h2>L'industrialisation</h2>
+        </section>
+        <section>
+            <h3>Le pub</h3>
+        </section>
+        <section>
+            <h3>Les transformers</h3>
+        </section>
+        <section>
+            <h3>Drone.io</h3>
+        </section>
+        <section>
+            <h2>Polymer</h2>
+        </section>
+        <section>
+            <h2>AngularDart</h2>
+        </section>
+        <section>
+            <h2>Conclusion</h2>
+        </section>
     </div>
 </div>
 
