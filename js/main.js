@@ -40,8 +40,15 @@
 
     Reveal.addEventListener('ready', function (event) {
         var id = event.currentSlide.getAttribute('id');
-        callIfExist(id + "_onReady", event);
-        callIfExist(id + "_onChanged", event);
+
+        function checkState(){
+            if(document.readyState == 'complete') {
+                clearInterval(checkCompleteLoading);
+                callIfExist(id + "_onReady", event);
+                callIfExist(id + "_onChanged", event);
+            }
+        }
+        var checkCompleteLoading = setInterval(checkState,100);
     });
     Reveal.addEventListener('slidechanged', function (event) {
         var id = event.currentSlide.getAttribute('id');
