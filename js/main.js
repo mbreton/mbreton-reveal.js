@@ -8,7 +8,9 @@ Reveal.initialize({
 
     // Optional libraries used to extend on reveal.js
     dependencies: [
-        { src: 'plugin/sample-loader/loader.js', async: false},
+        { src: 'plugin/sample-loader/loader.js', async: false, condition: function () {
+            return !!document.querySelector('[data-load]');
+        } },
         { src: 'lib/js/classList.js', condition: function () {
             return !document.body.classList;
         } },

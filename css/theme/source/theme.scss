@@ -1,1 +1,34 @@
-@import "sky";
+@import "simple";
+
+.reveal {
+  section {
+    .stretch {
+      iframe {
+        &:not([class*="col-"]) {
+          width: 100%;
+        }
+        height: 90%;
+        border: none;
+        overflow: hidden;
+      }
+    }
+    .grid [class*="col-"] {
+      height: 100%;
+    }
+
+    &#sdk_js {
+      img {
+        max-height: 3em;
+      }
+      .lo-dash {
+        margin: 0 0 1em 0;
+        font-size: 2.5em;
+      }
+    }
+    img{
+      border: 0px;
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+}
