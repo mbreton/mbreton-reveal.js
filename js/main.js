@@ -37,21 +37,29 @@
 
     function callIfExist(funcName, event) {
         var hasFunction = typeof window[funcName] == "function";
-        if (hasFunction) window[funcName](event);
+        if (hasFunction) {
+            console.log('hook ' + funcName + ' fired !');
+            window[funcName](event);
+        }
         return hasFunction;
     }
 
     Reveal.addEventListener('ready', function (event) {
-        var id = event.currentSlide.getAttribute('id');
-
-        function checkState(){
-            if(document.readyState == 'complete') {
+        function checkState() {
+            if (document.readyState == 'complete') {
                 clearInterval(checkCompleteLoading);
-                callIfExist(id + "_onReady", event);
-                callIfExist(id + "_onChanged", event);
+                var sections = document.querySelectorAll('section');
+                Array.prototype.forEach.call(sections, function (section) {
+                    var id = section.getAttribute('id');
+                    if (id) {
+                        callIfExist(id + "_onReady", event);
+                        callIfExist(id + "_onChanged", event);
+                    }
+                });
             }
         }
-        var checkCompleteLoading = setInterval(checkState,100);
+
+        var checkCompleteLoading = setInterval(checkState, 100);
     });
     Reveal.addEventListener('slidechanged', function (event) {
         var id = event.currentSlide.getAttribute('id');

@@ -1,10 +1,17 @@
+import 'duck.dart';
+
 // top level function
-makeFilletOfDuckBreast(Duck duck) {
+makeNoise(Duck duck) {
   print(duck.quack());
-  // humm, fresh meat !
 }
 
 main() {
   AnAnimal myDuck = new AnAnimal();
-  makeFilletOfDuckBreast(myDuck);
+  Duck myDuck2 = new GreenDuck();
+
+  // 'Green Coin !'
+  makeNoise(myDuck);
+
+  // 'Coin !'
+  makeNoise(myDuck2);
 }
