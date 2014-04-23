@@ -1,0 +1,8 @@
+name: A super projet
+description: A super description
+dependencies:
+  angular: 0.9.8
+  browser: any
+  js: any
+  shadow_dom: any
+  unittest: any

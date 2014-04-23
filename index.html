@@ -21,7 +21,7 @@
 <div class="reveal">
 <div class="slides">
 <section>
-    <h1>Dart</h1>
+    <img src="img/dart-logo-wordmark.png"/>
 </section>
 <section>
     <h3>About://me</h3>
@@ -66,6 +66,7 @@
 </section>
 <section id="js_show">
     <h3>Le JS SHOW</h3>
+
     <div id="js-terminal" class="terminal stretch"></div>
     <p>&nbsp;</p>
     <aside class="notes" data-markdown>
@@ -102,6 +103,7 @@
 </section>
 <section>
     <h3 class="underline">Tout est une question de contexte</h3>
+
     <div>
         <pre><code id="context.js" data-trim data-load class="language-js"></code></pre>
         <pre class="fragment"><code id="context_result.js" data-load data-trim class="language-js"></code></pre>
@@ -194,7 +196,7 @@
     </section>
 </section>
 <section>
-    <h3>Typage statique "fort" explicite statique, mais optionnel</h3>
+    <h4>Typage statique "fort" explicite statique, mais optionnel</h4>
     <pre><code id="type.dart" class="language-dart" data-trim data-load></code></pre>
     <pre class="fragment"><code data-trim id="type2.dart" class="language-dart" data-load></code></pre>
     <aside class="notes" data-markdown>
@@ -227,13 +229,18 @@
 </section>
 <section>
     <h3>Des librairies</h3>
+
+    <div class="grid grid-pad stretch">
+        <div class="col-1-3">
+            <img src="/img/libs.png"/>
+        </div>
+        <div class="col-2-3">
+            <pre><code id="libs.dart" class="language-dart" data-trim data-load></code></pre>
+        </div>
+    </div>
 </section>
 <section>
     <h3>Je peux encore discuter avec mon JS ?</h3>
-</section>
-<section>
-    <h3>De l'introspection</h3>
-
 </section>
 <section>
     <h3>Des <span class="color">Thread</span> !</h3>
@@ -342,86 +349,159 @@
     </section>
 </section>
 <section>
-    <h3>Le snapshot</h3>
-
-    <div>Représentation sérialisé d'un objet, d'un thread ou d'une application</div>
+    <section>
+        <h3>Le snapshot</h3>
+        <div>Représentation sérialisée d'un objet, d'un thread ou d'une application</div>
+        <blockquote class="fragment">dart --snapshot=out-file dart-script-file</blockquote>
+        <blockquote class="fragment">dart snapshot-file args</blockquote>
+    </section>
+    <section>
+        <h3>Le snapshot - efficace ?</h3>
+        <img src="img/snapshot.png"/>
+    </section>
 </section>
 <section data-background="img/industrialisaton.png"
          data-background-size="cover"
          data-background-transition="slide">
-    <h2 class="alone">L'industrialisation</h2>
+    <h2 class="alone">industrialisation</h2>
 </section>
 <section>
-    <h3>Le pub</h3>
+    <section>
+        <h3>Le pub</h3>
+        <ul>
+            <li>LE système de build/dépendence de Dart</li>
+            <li class="fragment">Configuré par un fichier <span class="color">pubspec.yaml</span></li>
+            <li class="fragment">Disponible sous la forme de ligne commande
+                <ul>
+                    <li class="fragment">pub install</li>
+                    <li class="fragment">pub deploy</li>
+                    <li class="fragment">pub build</li>
+                    <li class="fragment">...</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3>Le pub - pub.dartlang.com</h3>
+        <img src="/img/pub_web_site.png"/>
+    </section>
+    <section>
+        <h3>Le pub - pubspec.yaml</h3>
+        <pre><code id="pubspec.yaml" data-trim data-load class="language-yaml"></code></pre>
+    </section>
 </section>
 <section>
-    <h3>Les transformers</h3>
+    <section>
+        <h3>Les transformers</h3>
+
+        <div class="grid grid-pad">
+            <div class="col-1-3">
+                <img src="img/decepticon.png"/>
+            </div>
+            <div class="col-2-3">
+                <ul>
+                    <li>Le gulp du monde Dart</li>
+                    <li>
+                        Définie dans le pubspec.yaml
+                        <pre><code id="pubspec_transformer.yaml" data-trim data-load class="language-yaml"></code></pre>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Les transformers - code</h3>
+        <pre><code id="transformer.dart" class="language-dart stretch" data-trim data-load></code></pre>
+    </section>
 </section>
-<section>
-    <h3>Drone.io</h3>
-</section>
-<section data-background="img/polymer.jpg"
+<section data-background="img/polymer.png"
          data-background-size="cover"
          data-background-transition="slide">
-    <h2 class="alone">Polymer</h2>
+    <h2 class="alone">
+        <img style="height: 1em;margin: 0;margin-bottom: -0.15em;" src="/img/polymer-logo.svg"/>Polymer
+    </h2>
 </section>
 <section>
-    <img src="img/polymer-architecture.jpg"/>
+    <img src="img/polymer-architecture.jpg" class="stretch"/>
 </section>
 <section>
-    <h2>Elements customisables</h2>
-    <pre><code data-trim class="language-html"><x-click-counter></x-click-counter></code></pre>
+    <h3>Elements customisables</h3>
+    <pre><code data-trim class="language-html">
+        <x-click-counter></x-click-counter>
+    </code></pre>
     <pre><code id="click-counter.html" data-trim class="language-html" data-load></code></pre>
 </section>
 <section>
-    <h2>Template HTML</h2>
+    <h3>Template HTML</h3>
     <pre><code id="template.html" data-trim class="language-html" data-load></code></pre>
     <pre><code id="template_2.html" data-trim class="language-html" data-load></code></pre>
     <pre><code id="template_3.html" data-trim class="language-html" data-load></code></pre>
 </section>
 <section>
-    <h2>Import HTML</h2>
+    <h3>Import HTML</h3>
     <pre><code id="import.html" data-trim class="language-html" data-load></code></pre>
 </section>
 <section>
-    <h2>Côté Dart</h2>
+    <h3>Côté Dart</h3>
     <pre><code id="component.dart" data-trim class="language-dart" data-load></code></pre>
 </section>
 <section data-background="img/angulardart.png"
-    data-background-size="cover"
-    data-background-transition="slide">
+         data-background-size="cover"
+         data-background-transition="slide">
     <h2 class="alone">AngularDart</h2>
 </section>
 <section>
     <h2>Conclusion</h2>
+    <ul>
+        <li class="fragment">Répond aux problèmes du web moderne</li>
+        <li class="fragment">Connait encore quelques bugs récalcitrants (dart2js)</li>
+        <li class="fragment">Stratégique pour Google (Blink, Android ?)</li>
+        <li class="fragment">L'enjeux est dans son adoption chez les autres buttineurs</li>
+    </ul>
+    <p>&nbsp;</p>
+
+    <h3 class="fragment">Avocat du diable</h3>
+    <ul>
+        <li class="fragment">Un peu plus de sucre syntaxique</li>
+        <li class="fragment">Prennez garde à big brother</li>
+    </ul>
 </section>
-<section>
-    <h2>Aller plus loin</h2>
-    <div class="grid grid-pad">
-        <div class="col-1-3">
-            <img src="img/book_learning_dart.jpg">
+<section data-background="img/question.png"
+         data-background-size="cover"
+         data-background-transition="slide">
+    <section></section>
+    <section>
+        <h2 class="alone">Aller plus loin</h2>
+
+        <div class="grid grid-pad">
+            <div class="col-1-3">
+                <img src="img/book_learning_dart.jpg">
+            </div>
+            <div class="col-1-3">
+                <img src="img/book_up_and_running.jpg">
+            </div>
+            <div class="col-1-3">
+                <img src="img/book_dart_for_hipster.jpg">
+            </div>
         </div>
-        <div class="col-1-3">
-            <img src="img/book_up_and_running.jpg">
+        <div class="grid grid-pad">
+            <div class="col-1-3" style="color:white;background-color:black;">
+                <a href="http://goo.gl/jS8obo">goo.gl/jS8obo</a>
+
+                <div>LDEB25</div>
+            </div>
+            <div class="col-1-3" style="color:white;background-color:black;">
+                <a href="http://goo.gl/lG0XP7">goo.gl/lG0XP7</a>
+
+                <div>DART</div>
+            </div>
+            <div class="col-1-3" style="color:white;background-color:black;">
+                <a href="http://goo.gl/HIEf61">goo.gl/HIEf61</a>
+
+                <div>pragprogDart2014</div>
+            </div>
         </div>
-        <div class="col-1-3">
-            <img src="img/book_dart_for_hipster.jpg">
-        </div>
-    </div>
-    <div class="grid grid-pad">
-        <div class="col-1-3">
-            <a href="http://goo.gl/jS8obo">goo.gl/jS8obo</a>
-            <div>LDEB25</div>
-        </div>
-        <div class="col-1-3">
-            <a href="http://goo.gl/lG0XP7">goo.gl/lG0XP7</a>
-            <div>DART</div>
-        </div>
-        <div class="col-1-3">
-            <a href="http://goo.gl/HIEf61">goo.gl/HIEf61</a>
-            <div>pragprogDart2014</div>
-        </div>
-    </div>
+    </section>
 </section>
 </div>
 <footer>
