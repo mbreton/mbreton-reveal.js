@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Présentation - De Mathieu Breton</title>
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="description" content="Présentation au DevFest Marseille 2014 de Dart">
     <meta name="author" content="Mathieu Breton">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
@@ -37,8 +37,10 @@
                 <p class="title">Mathieu Breton : /[mathieu] bʀətɔ̃/ (n.m.)</p>
                 <ul>
                     <li>Consultant Xebia, membre actif de la communauté web à Paris</li>
-                    <li>Chevalier de l’ordre du mérite des Single Page Applications</li>
                     <li>Artisan web, instructeur Neo4J, docteur ès Grails et contributeur Ember.JS</li>
+                    <li>Membre du DartLangFr, Organisateur de Flight Dart School, Commiteur du codelab officle de
+                        Angular Darts
+                    </li>
                 </ul>
             </div>
         </div>
@@ -139,7 +141,7 @@
 
     <div>Propulsé par Google en <span class="color">2011</span></div>
 
-    <div class="fragment">Récemment sorti en <span class="color">version 1.3</span></div>
+    <div class="fragment">Récemment sorti en <span class="color">version 1.3.3</span></div>
 
     <div class="fragment">Sous licence <span class="color">BSD</span></div>
 
@@ -240,8 +242,23 @@
     </div>
 </section>
 <section>
-    <h3>Je peux encore discuter avec mon JS ?</h3>
+    <section>
+        <h3>Je peux encore discuter avec mon JS ?</h3>
+
+        <p class="fragment">Oui, grâce à la librairie dart:js (anciennement js-interop)</p>
+
+        <div class="fragment">
+            <pre><code id="dart_js.dart" class="language-dart" data-load></code></pre>
+            Notez la convertion de type transparente
+        </div>
+    </section>
+
+    <section>
+        <h3>Dart<->JS, asynchronisme</h3>
+        <pre><code id="dart_js_async.dart" class="language-dart" data-load></code></pre>
+    </section>
 </section>
+
 <section>
     <h3>Des <span class="color">Thread</span> !</h3>
     <pre><code data-trim class="language-dart" id="isolate.dart" data-load></code></pre>
@@ -351,6 +368,7 @@
 <section>
     <section>
         <h3>Le snapshot</h3>
+
         <div>Représentation sérialisée d'un objet, d'un thread ou d'une application</div>
         <blockquote class="fragment">dart --snapshot=out-file dart-script-file</blockquote>
         <blockquote class="fragment">dart snapshot-file args</blockquote>
@@ -451,12 +469,55 @@
     <h2 class="alone">AngularDart</h2>
 </section>
 <section>
+    <section>
+        <h3>AngularDart vs AngularJS</h3>
+        <br/>
+        <ul>
+            <li class="fragment">AngularJS V2 et AngularDart sont assez proches</li>
+            <li class="fragment">Utilisation des classes et des annotations</li>
+            <li class="fragment">Injection de dépendance via les types et non via les noms</li>
+            <li class="fragment">Utilisation du $scope quasi inexistante</li>
+            <li class="fragment">Au revoir $scope.apply, grâce aux Zones</li>
+            <li class="fragment">Les directives devienent des décorateurs de vue</li>
+            <li class="fragment">Au profit, des components (Polymer) quand l'on veut injecter du DOM</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Les Zones</h3>
+
+        <div class="grid grid-pad">
+            <div class="col-1-2">
+                <img src="img/area51-map.png">
+            </div>
+            <div class="col-1-2">
+                <ul>
+                    <li>Un contexte d'éxecution propre à un "Thead"</li>
+                    <li>Sert à "scoper" du code asynchrone</li>
+                    <li>Dans AngualarJS V2 et AngularDart</li>
+                </ul>
+                <br/>
+                <a href="github.com/angular/zone.js">github.com/angular/zone.js</a>
+            </div>
+        </div>
+    </section>
+</section>
+<section>
+    <h3>AngularDart - Exemple de controller</h3>
+    <pre><code id="controller.dart" class="stretch" data-load></code></pre>
+</section>
+<section>
+    <h3>AngularDart - Exemple de component</h3>
+    <pre><code id="angular_component.dart" class="stretch" data-load></code></pre>
+    <pre class="fragment"><code id="angular_component.html" class="stretch" data-load></code></pre>
+</section>
+<section>
     <h2>Conclusion</h2>
     <ul>
         <li class="fragment">Répond aux problèmes du web moderne</li>
         <li class="fragment">Connait encore quelques bugs récalcitrants (dart2js)</li>
         <li class="fragment">Stratégique pour Google (Blink, Android ?)</li>
-        <li class="fragment">L'enjeux est dans son adoption chez les autres buttineurs</li>
+        <li class="fragment">L'enjeu est dans son adoption chez les autres buttineurs</li>
     </ul>
     <p>&nbsp;</p>
 
