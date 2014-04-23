@@ -1,5 +1,4 @@
 function js_show_onChanged() {
-    console.log('js_show_onChanged');
     var isStoppingPropagation = false;
     var settings = {
         greetings: 'Javascript Console',

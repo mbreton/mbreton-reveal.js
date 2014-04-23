@@ -1,6 +1,18 @@
-@import "simple";
+@import "solarized";
+
+@font-face {
+  font-family: 'batman';
+  src: url('/lib/font/batmfa__.ttf');
+}
 
 .reveal {
+  background: url('/img/bg.jpg');
+
+  .color{
+    font-family: 'batman';
+    color: #2f8be8;
+  }
+
   section {
     .stretch {
       iframe {

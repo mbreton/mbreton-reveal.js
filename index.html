@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/theme.css">
     <link rel="stylesheet" href="css/simplegrid.css">
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/solarized_light.css">
     <link rel="stylesheet" href="lib/css/jquery.terminal.css">
     <link rel="stylesheet" href="lib/css/terminal.css">
 </head>
@@ -159,11 +159,9 @@
         ou sur <span class="color">Dartium</span>, une version de Chromium
     </p>
 </section>
-
 <section>
     Est donc nativement côté <span class="color">serveur</span> & côté <span class="color">client</span>
 </section>
-
 <section>
     Ou peut être compilé <span class="color">en JavaScript</span>
 
@@ -171,19 +169,24 @@
         Transpileur <span class="color">Dart2Js</span>
     </p>
 </section>
-
 <section>
-    <p>Nativement, Dart est plus <span class="color">rapide</span> que JavaScript</p>
-
-    <p>Et...</p>
-
-    <p class="fragment">Le code JS généré peut être plus rapide que celui <span
-            class="color">écrit à la main</span></p>
-
-    <aside class="notes" data-markdown>
-        * Le tree checking supprime les codes morts
-        * L'inférence de type global
-    </aside>
+    <h3>Familier à Java</h3>
+    <pre><code id="main.dart" class="language-dart" data-trim data-load></code></pre>
+    <pre class="fragment"><code>Hello DevFest Marseille</code></pre>
+</section>
+<section>
+    <section>
+        <h4>Paramètres optionnels nommés</h4>
+        <pre><code id="optionel.dart" class="language-dart" data-trim data-load></code></pre>
+        <pre class="fragment"><code id="optionel_2.dart" class="language-dart" data-trim data-load></code></pre>
+        <pre class="fragment"><code id="optionel_3.dart" class="language-dart" data-trim data-load></code></pre>
+        <pre class="fragment"><code id="optionel_4.dart" class="language-dart" data-trim data-load></code></pre>
+        <pre class="fragment"><code id="optionel_5.dart" class="language-dart" data-trim data-load></code></pre>
+    </section>
+    <section>
+        <h4>Paramètres optionnels positionnés</h4>
+        <pre><code id="parameter_positioned.dart" class="language-dart" data-trim data-load></code></pre>
+    </section>
 </section>
 <section>
     <h3>Typage statique "fort" explicite statique, mais optionnel</h3>
@@ -194,19 +197,49 @@
     </aside>
 </section>
 <section>
-    Modèle <span class="color">orienté objet</span>
+    <h3>Duck Typing, et class</h3>
+
+    <div class="grid grid-pad">
+        <div class="col-1-2">
+            <pre><code id="duck.dart" class="language-dart" data-trim data-load></code></pre>
+        </div>
+        <div class="col-1-2">
+            <pre><code id="duck_2.dart" class="language-dart" data-trim data-load></code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h3>Modèle <span class="color">orienté objet</span></h3>
     <pre><code data-trim class="language-dart" id="class.dart" data-load></code></pre>
+    <p class="fragment">Mais de pas d'interface</p>
     <aside class="notes" data-markdown>
         Préciser pour dart la différence entre sa version de l’orienté objet et l’orienté objet JS.
     </aside>
 </section>
 <section>
-    Asynchronisme basé sur des <span class="color">Futures</span>
+    <h3>De la composition, avec les mixins</h3>
+</section>
+<section>
+    <h3>Asynchronisme basé sur des <span class="color">Futures</span></h3>
     <pre><code data-trim class="language-dart" id="futur.dart" data-load></code></pre>
-    <div class="fragment">
-        Gestion des flux avec les <span class="color">Streams</span>
-        <pre><code data-trim class="language-dart" id="stream.dart" data-load></code></pre>
-    </div>
+</section>
+<section>
+    <h3>Gestion des flux avec les <span class="color">Streams</span></h3>
+    <pre><code data-trim class="language-dart" id="stream.dart" data-load></code></pre>
+</section>
+<section>
+    <h3>Des librairies</h3>
+</section>
+<section>
+    <h3>Je peux encore discuter avec mon JS ?</h3>
+</section>
+<section>
+    <h3>De l'introspection</h3>
+
+</section>
+<section>
+    <h3>Des <span class="color">Thread</span> !</h3>
+    <pre><code data-trim class="language-dart" id="isolate.dart" data-load></code></pre>
 </section>
 <section>
     <h3>Un vraie SDK</h3>
@@ -238,10 +271,18 @@
         </div>
     </div>
 </section>
-
 <section>
-    Des <span class="color">Thread</span> !
-    <pre><code data-trim class="language-dart" id="isolate.dart" data-load></code></pre>
+    <div>Nativement, Dart est plus <span class="color">rapide</span> que JavaScript</div>
+    <p>Et...</p>
+
+    <div class="fragment">
+        Le code JS généré peut être plus rapide que celui <span class="color">écrit à la main</span>
+    </div>
+
+    <aside class="notes" data-markdown>
+        * Le tree checking supprime les codes morts
+        * L'inférence de type global
+    </aside>
 </section>
 
 <section>
