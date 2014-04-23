@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/theme/theme.css">
     <link rel="stylesheet" href="css/simplegrid.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/jquery.terminal.css">
+    <link rel="stylesheet" href="lib/css/terminal.css">
 </head>
 <body>
 
@@ -56,10 +58,10 @@
 <section>
     <h2>Mais pourquoi ont-ils eu cette idée folle ?</h2>
 </section>
-<section data-id="js-show">
+<section id="js_show">
     <h3>Le JS SHOW</h3>
 
-    <div id="js-terminal" class="stretch"></div>
+    <div id="js-terminal" class="terminal stretch"></div>
     <p>&nbsp;</p>
     <aside class="notes" data-markdown>
         * typeof null : montrer l'inconhérence
@@ -82,7 +84,7 @@
     <iframe data-autoplay width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0"
             frameborder="0"></iframe>
 </section>
-<section data-id="ut-editor">
+<section id="ut_editor">
     <h3 class="underline">Tester c'est douter, surtout en JavaScript !</h3>
 
     <div class="grid grid-pad stretch">
@@ -200,10 +202,10 @@
 </section>
 <section>
     Asynchronisme basé sur des <span class="color">Futures</span>
-    <pre><code data-trim class="language-dart" id="futur.dart" data-load></code></code></pre>
+    <pre><code data-trim class="language-dart" id="futur.dart" data-load></code></pre>
     <div class="fragment">
         Gestion des flux avec les <span class="color">Streams</span>
-        <pre><code data-trim class="language-dart" id="stream.dart" data-load></code></code></pre>
+        <pre><code data-trim class="language-dart" id="stream.dart" data-load></code></pre>
     </div>
 </section>
 <section>
@@ -328,8 +330,9 @@
 </div>
 
 <script src="lib/js/head.min.js"></script>
-<script src="js/reveal.min.js"></script>
+<script src="js/reveal.js"></script>
 <script src="js/main.js"></script>
+<script src="js/hooks.js"></script>
 <script src="js/lodash.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="lib/js/jquery.terminal-0.7.7.min.js"></script>
