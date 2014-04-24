@@ -177,11 +177,19 @@
     <p class="fragment">
         Transpileur <span class="color">Dart2Js</span>
     </p>
+    <aside class="notes" data-markdown>
+        * Le Dart2js génère actuellement un JS certe très réduit par rapport à avant mais reste de taille non négligable
+        * Cependant, se rappeler qu'il couvre jquery, lodash, require ...
+    </aside>
 </section>
 <section>
     <h3>Ressemble à Java ou C#</h3>
     <pre><code id="main.dart" class="language-dart" data-trim data-load></code></pre>
     <pre class="fragment"><code>Hello DevFest Marseille</code></pre>
+</section>
+<section>
+    <h4>Visibilité par convention, et getter/setter</h4>
+    <pre><code id="visibility.dart" class="language-dart" data-trim data-load></code></pre>
 </section>
 <section>
     <section>
@@ -220,6 +228,10 @@
 <section>
     <h3>De la composition, avec les <span class="color">mixins</span></h3>
     <pre><code data-trim class="language-dart" id="mixins.dart" data-load></code></pre>
+</section>
+<section>
+    <h3>Des metadatas</h3>
+    <pre><code data-trim class="language-dart" id="meta.dart" data-load></code></pre>
 </section>
 <section>
     <h3>Asynchronisme basé sur des <span class="color">Futures</span></h3>
